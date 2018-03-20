@@ -1,4 +1,6 @@
 \documentclass[conference]{IEEEtran}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
 \begin{document}
 
 \title{ARchitect: AR Based Construction Simulator}
@@ -9,13 +11,13 @@
 Chennai, India \\
 saikiranreddy1001@gmail.com}
 \and
-\IEEEauthorblockN{2\textsuperscript{nd} Vijay Krishna Vallabhaneni}
+\IEEEauthorblockN{2\textsuperscript{nd} Vijay Krishna V}
 \IEEEauthorblockA{\textit{Dept. of Comp. Sc. Engg} \\
 \textit{SRMIST}\\
 Chennai, India \\
 krsnvijay@gmail.com}
 \and
-\IEEEauthorblockN{3\textsuperscript{rd} Mettu Kesava Krishna Reddy}
+\IEEEauthorblockN{3\textsuperscript{rd} M Kesava Krishna Reddy}
 \IEEEauthorblockA{\textit{Dept. of Comp. Sc. Engg} \\
 \textit{SRMIST}\\
 Chennai, India \\
@@ -67,27 +69,55 @@ At present the effect of natural calamities might some times turn out to be inca
 The alignment and design of AR based models according to real-time scenarios requires precision and correctness. The tools used in designing such effective structural designs and simulations are three.js, AR.js, A-Frame, Tracking.js . The various user interactive formats proposed in the design are Gesture Recognition, Marker Tracking, 3D Object Interaction, 3D Scene Rendering.
 \section{Literature Survey}
 % TODO:Atleast 4 papers %
-\subsection{Table Top AR}
- The AR interface helps in manipulating 3-D virtual objects over a table top. Several architects can sit around a table to design a plan for the building that is about to be constructed. Here through HMD displays they can see their plans in 3-D projections. The 3-D models are mapped to the real environment. This helps in face to face collaboration where they can design virtual scenes and experience them immersively. It also helps to overcome real life obstacles at the time of creation and planning . 
+\subsection{Virtual object manipulation on a table-top AR environment}
+ The AR interface helps in manipulating 3-D virtual objects over a table top\cite{tabletop}. Several architects can sit around a table to design a plan for the building that is about to be constructed. Here through HMD displays they can see their plans in 3-D projections. The 3-D models are mapped to the real environment. This helps in face to face collaboration where they can design virtual scenes and experience them immersively. It also helps to overcome real life obstacles at the time of creation and planning . 
 
 \subsection{Introduction of Physics Simulation in AR}
-The augmented reality is an environment where it has both virtual and real objects simultaneously. So it is necessary to describe the object in correct physical manner.the motion of virtual objects in reality may be less attractive and is hard for AR objects to be perceived as real. This gap can be reduced by using different physics engines. This helps in visualizing real world scenarios where these engines can be used to detect daily routines for rigid bodies,particles,dynamics,collision detection,havoc engine for havoc detections.
+The augmented reality is an environment where it has both virtual and real objects simultaneously. So it is necessary to describe the object in correct physical manner.the motion of virtual objects in reality may be less attractive and is hard for AR objects to be perceived as real. This gap can be reduced by using different physics engines. This helps in visualizing real world scenarios where these engines can be used to detect daily routines for rigid bodies,particles,dynamics,collision detection,havoc engine for havoc detections\cite{introphysics}.
 
 \subsection{3D interaction techniques using gestures recognition in virtual environment}
-Now a days with the use of smart phones touch screens have become popular but they have limited functionality. Use of the hand gestures is an interesting way to interaction with the AR environment as the experience is more natural and intuitive. Here the AR environment can be manipulated by hand gesture recognition techniques. cyberglove is an tool that can be used to record and obtain information on hand motions. GRT(gesture recognition toolkit) also helps in receiving these hand motion data from the given input signals. The interaction techniques are mostly by gestures like direction,placement etc.
+Now a days with the use of smart phones touch screens have become popular but they have limited functionality. Use of the hand gestures is an interesting way to interaction with the AR environment as the experience is more natural and intuitive. Here the AR environment can be manipulated by hand gesture recognition techniques\cite{gestureinteraction}. cyberglove is an tool that can be used to record and obtain information on hand motions. GRT(gesture recognition toolkit) also helps in receiving these hand motion data from the given input signals. The interaction techniques are mostly by gestures like direction,placement etc.
 
+\subsection{AR for construction site monitoring and documentation}
+The growth in the use AR has eased the study and development in various fields. The demands for documentation of work progress and its physical visualization has been increased . Using 3-D reconstruction and aerial monitoring the physical environment has been captured and the progress of the work can be seen where the physical data is projected in to the system or the devices with clients for on site visualization using AR\cite{sitemonitoring}. Augmented reality ( is an interface that overlays digital information onto the user's view, spatially aligned to the current physical environment . The user's view is often a camera image of their physical surroundings. The video image is augmented with digital information and rendered on the display device. Such an overlay allows for the presentation of information that is relevant to a specific task right on site and aligned to the objects of interest.
+\subsection{The research and application of AR technology}
+AR  utilizes virtual information generated by computer to mix with the real environment users observe. The real environment and virtual reality timely add to the same scene or space co-exist, expanding and augmenting the perception of users with the  world around. AR provides the information different from the information human can sense in general condition ,which not only demonstrates the information of real world but also the virtual reality.
+
+Through the related research and analysis, three-dimensional tracking registration, real-time human-computer interaction and virtual reality fusion are the key techniques to affect the performance of AR system\cite{researchar}. With the continuous development of virtual reality technology, especially from the laboratory stage to the practical application, its impact is increasingly significant.
 \section{Proposed Methodology}
+The ability of AR to respond to user input in the real-world environment brings in significant potential for learning and assessment, as students build high quality architectural designs with ease by interacting with the virtual models that bring underlying data to life. AR systems have been used effectively as tools in various fields such as engineering graphics, architecture, and medicine. However, most of the applications focus on entertainment and the content is usually predefined by developers. By providing a virtual sandbox along with a set of tools that aid the development process, the user has more control over the content and can create quick mock-up of designs that are beautiful and unique.New and aspiring architects can build better and safe designs by learning from the vulnerabilities of their current designs with the help of simulations.
+
+The proposed methodology is to perform the simulation of real-time calamities in the virtual scene which would help us to visualize the model in real-life and help to minimize the loss caused by natural disasters and reduce structural weak points in a design.In this paper, we have included the simulation of real-time calamities to check for the structural
+integrity of the structures designed in the virtual scene. Along with the tools to construct a virtual model, we have also included various test cases that simulate the effect of wind, lightning, floods and rain on the structures to provide a detailed report to the user , which can help
+us to not only be prepared for the damage caused by natural calamities ,but also minimize them by building a strong and durable design.
 % TODO: Use more Images %
-\subsection{User Experience}
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{architecture.jpg}
+	\caption{System Architecture.}
+	\label{fig:system-architecture}
+\end{figure}
 \subsection{Interaction}
-% TODO:HandTracking %
-\subsection{Design}
+Using this virtual sandbox we are going to build the structures on a table-top environment that can be visualized in 3-D using AR technology. The structural components such as walls, columns, windows, doors, and pipings and electrical wires are included in the toolset that can be placed in the virtual scene by the user according to their requirements.To give the user a sense of freedom, The hand-tracking plays a major role in designing as it needs to be accurate and with utmost precision to provide a natural and interactive experience. Once the structure has been designed, various
+simulations can be performed on the designed structure to understand the structural integrity.
+
+The interaction of various simulated calamities used on the structural design are as follows:
+\paragraph{Rain}  When taking a design into consideration, a structure should be well designed both inside and out. And due to the cohesive nature of water, it can be a major damage causing agent to the structure. As some materials absorb water and get weak over time. By simulating the effect of water on the materials used in construction we can better understand the integrity of a structure and find any weaknesses if present.
+
+\paragraph{Wind}: It is helpful in simulating the effect of high altitude winds such as storms and hurricanes.This can also help us create a better design by managing the ventilation areas, the flow of air in the building thus minimizing the damage to the structure.   
+
+\paragraph{Floods}: Floods are a frequent disaster, occurring when water flows over the usual level in riverbeds or banks. Floods usually result from a combination of various unfavorable events, an especially significant one is a large amount of precipitation within a relatively short time. If precipitation falls onto a frozen, impermeable, or saturated surface, the riverbeds fill very quickly. Because they cannot drain the surplus water,
+the water flows over the river channels.Therefore, the most appropriate method remains the selection of a suitable and safe location, in some places, damage can be reduced by erecting a building without a cellar or in an elevated location.
+
+\paragraph{Lightning \& Fire}: Fire is a disaster that is not always caused by a natural phenomenon. It is natural only if it is caused by
+lightning or some other natural process. Every year, several hundreds of buildings are affected by fire caused by lightning.Such fires can be practically reduced, thanks to developments in lighting and heating technology and the use of less flammable building materials. Simulation of the spread of fire over the structure can help us in placing safety exits that are easy to access and are unaffected by the fire.
+
+\paragraph{Earth-quake}: Earthquakes are natural processes that affect people frequently and severely. Earthquakes do not directly affect people, the injuries and casualties are the result of destroyed buildings, fires, explosions, uncontrolled leakage of hazardous substances into the environment, floods, and other changes caused by the earthquake. Earthquakes destroy or damage primarily older buildings. Even when the structures are built in line with earthquake safety regulations, they can still suffer from severe damage. Well-constructed and well-renovated buildings can reduce the impact to a minor range. By analyzing the structural weak points and using lightweight materials its impact can be reduced.
 
 \section{Prototype System}
 % TODO: Include Open Source Libraries %
 As the project should be easily accessible, We've developed it using Web Technologies so that it can run on any device that has a web browser and is not limited by OS or Hardware.
 Since it is a web application no installation is required and can be accessed anywhere.
-
 
 \subsection{Frameworks, Tools used for development}
 \subsubsection{Three.js} Three.js is a cross-browser JavaScript library/API used to create and display animated 3D computer graphics in a web browser. Three.js uses WebGL.
@@ -95,8 +125,11 @@ Since it is a web application no installation is required and can be accessed an
 \subsubsection{A-Frame} A-Frame is a powerful entity-component framework that provides a declarative, extensible, and composable structure to three.js.
 A-Frame’s core components include geometries, materials, lights, models, shadows, physics, motion capture and augmented reality.
 \subsubsection{Tracking.js} The tracking.js library brings different computer vision algorithms and techniques into the browser environment. By using modern HTML5 specifications real-time color tracking, face detection, motion tracking is possible.
-\subsection{Prototype Architecture}
-
+\begin{figure}
+	\includegraphics[width=\linewidth]{dataflow.jpg}
+	\caption{Data Flow Diagram}
+	\label{fig:data-flow}
+\end{figure}
 \subsection{Modules}
 With the help of advanced augmented-reality technology such as computer vision and object recognition, the information about the surrounding real world of the user becomes interactive and able to be digitally manipulated. 
 \subsubsection{Marker Tracking}
@@ -110,13 +143,21 @@ The real space is used for data input, users perform gestures that is detected b
 
 \subsubsection{Perspective Camera}
 This camera mode is designed to mimic the way the human eye sees. It is the most common projection mode used for rendering a 3D scene. When there is camera movement the perspective of the 3D virtual scene is also changed accordingly
-\section{Usability Evaluation}
-\subsection{Evaluation Result}
 % TODO:Table %
 \section{Conclusion}
+This paper proposes a method of application of physics engine to perform realistic simulations to the architectural design in AR environment that allows the user to interact with ease.
+
+In this paper we have included several test cases for simulating the natural calamities on the design that helps in providing an in-depth analysis of the structural weak points. Based on this report we can then improve our design by altering the materials or layout of the structure.To realize physical interactions different physical attributes like structural integrity,gravity and dynamics are taken into consideration. 
+
+In the future gesture recognition techniques for placing 3D objects in AR environment can make the experience more interactive and realistic.
+Since simulations are very resource intensive tasks the performance can be improved in future by rendering the simulation using server side GPU computing.
+
+Thus the application of AR in the field of architecture, structural design will eventually be useful to the Architects, Students as the design process is more interactive and helps in creating high quality designs that can be visualized as if it was present in the real world.
 
 \section*{Acknowledgment}
+The authors would like to thank Mrs.Elakya R (Asst. Prof. CSE, SRMIST) for the constant encouragement, timely support and guidance which helped us in successfully completing our proposal .
 
-\section*{References}
 
+\bibliographystyle{unsrt}
+\bibliography{references}
 \end{document}
